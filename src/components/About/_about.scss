@@ -1,0 +1,112 @@
+.container--about {
+  @include large {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.about {
+  margin-top: 100px;
+  padding-top: 0;
+}
+
+.img-wrapper {
+  @include large {
+    width: 50%;
+  }
+}
+
+.about__img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.about__wrapper {
+  @include large {
+    width: 50%;
+    padding-right: 30px;
+  }
+}
+.about__title {
+  @include font-size(30);
+  font-family: $second-font;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  &:after {
+    content: ".";
+    color: $primary;
+  }
+}
+
+.about__description {
+  @include font-size(16);
+  font-family: $base-font;
+  line-height: 1.4;
+  color: $secondary-text;
+  margin: 0 0 20px 0;
+  @include extra {
+    margin: 0 0 30px 0;
+  }
+}
+
+.about__contacts > p {
+  font-family: $second-font;
+  font-weight: 700;
+  line-height: 1.6;
+  color: $primary-text;
+  margin: 0 0 10px 0;
+  align-items: center;
+}
+
+.about__contacts > p span:first-child {
+  @include font-size(13);
+  text-transform: uppercase;
+  float: left;
+  display: block;
+}
+
+.about__link {
+  @include font-size(13);
+  padding-left: 90px;
+  display: block;
+  color: $secondary-text;
+  align-items: center;
+}
+
+.about__link--social {
+  display: inline;
+  padding: 0 10px 0 0;
+  @include large {
+    padding: 0 30px 0 0;
+  }
+}
+
+.about__btn {
+  width: 100%;
+  @include font-size(12);
+  font-family: $second-font;
+  font-weight: 700;
+  color: $third-text;
+  text-transform: uppercase;
+  background: $primary;
+  padding: 15px;
+  border: 0;
+  &:hover {
+    cursor: pointer;
+  }
+  @include large {
+    width: 35%;
+    margin-top: 10px;
+  }
+  @include extra {
+    margin-top: 20px;
+  }
+}
+
+.fab {
+  color: $secondary-text;
+  &:hover {
+    color: $primary;
+    transition: all 0.3s ease;
+  }
+}

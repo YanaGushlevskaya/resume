@@ -1,0 +1,57 @@
+@include normalize();
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: $base-font;
+}
+
+.content {
+  flex: 1 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include medium {
+    width: 720px;
+  }
+
+
+  @include large {
+    width: 940px;
+    padding: 0 15px;
+  }
+
+  @include extra {
+    width: 1170px;
+  }
+}
+
+.reset-list {
+  list-style-type: none;
+}
+
+.reset-link {
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+section:not(last-child) {
+  border-bottom: 1px solid $third;
+  padding: 20px 0 20px 0;
+}

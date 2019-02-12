@@ -1,0 +1,53 @@
+<header class="header">
+  <div class="container container--header">
+    <div class="logo-wrapper">
+      <a href="#" class="logo__link reset-link">
+        <span class="logo">Yana Gushlevskaya</span>
+        <span class="logo-edition">.</span>
+      </a>
+    </div>
+
+    <div class="nav-wrap">
+      <button class="nav-btn">
+          <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav class="nav">
+        <ul class="nav__list reset-list">
+          <li class="nav__item">
+            <a href="#" class="nav__link reset-link">Hello</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link reset-link">Skills</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link reset-link">Education</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link reset-link">Experience</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link reset-link">Contact me</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", init);
+
+    function init() {
+      const menuBtn = document.querySelector(".nav-btn");
+      const nav = document.querySelector(".nav");
+      let isActive = false;
+
+      menuBtn.addEventListener("click", function() {
+        const icon = this.querySelector("i");
+        isActive = !isActive;
+        icon.className = isActive ? 'fas fa-times' : 'fas fa-bars';
+        nav.classList.toggle("active");
+      });
+    }
+  </script>
+</header>

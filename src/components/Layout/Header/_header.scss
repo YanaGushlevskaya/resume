@@ -1,0 +1,148 @@
+.header {
+  width: 100%;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid $third;
+  background: #fff;
+  @include large {
+    padding: 20px 0;
+  }
+}
+
+.container--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo,
+.logo-edition {
+  @include font-size(18);
+  font-family: $second-font;
+  font-weight: 900;
+  color: $primary-text;
+  line-height: 1.5;
+}
+
+.logo-edition {
+  color: $primary;
+}
+
+.nav {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $primary;
+  display: flex;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.2s linear;
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  @include large {
+    transform: translateY(0);
+    background: transparent;
+    height: auto;
+    position: static;
+  }
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include large {
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+.nav__item:not(:last-child) {
+  padding-bottom: 30px;
+  @include large {
+    padding: 0 10px 0 10px;
+  }
+}
+
+.nav__item {
+  @include large {
+    position: relative;
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 0.5px;
+      width: 0px;
+      background-color: $primary;
+      bottom: 0;
+      left: 50%;
+      transition: width 0.3s ease-in-out;
+    }
+    &::after {
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+    &:hover::before,
+    &:hover::after {
+      width: 50%;
+    }
+    &:hover::after {
+      left: 0;
+    }
+  }
+}
+
+.nav__link {
+  @include font-size(14);
+  font-family: Lato;
+  font-weight: 700;
+  color: $third-text;
+  text-transform: uppercase;
+  line-height: 1.5;
+
+  @include large {
+    color: $primary-text;
+    position: relative;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.nav-btn {
+  @include size(22px, 22px);
+  @include font-size(18);
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: $shadow;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 99;
+  transition: color 0.2s linear;
+
+  &:hover {
+    color: $primary;
+  }
+
+  @include medium {
+    right: 65px;
+  }
+
+  @include large {
+    display: none;
+  }
+}
