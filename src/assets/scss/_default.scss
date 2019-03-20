@@ -42,6 +42,8 @@ body {
 
 .reset-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .reset-link {
@@ -54,4 +56,43 @@ body {
 section:not(last-child) {
   border-bottom: 1px solid $third;
   padding: 20px 0 20px 0;
+}
+
+.after-dot {
+  &:after {
+    content: ".";
+    color: $primary;
+  }
+}
+
+p {
+  @include font-size(16);
+  font-family: $base-font;
+  line-height: 1.4;
+  color: $secondary-text;
+  margin: 0;
+}
+
+.description {
+  @include large {
+    width: 50%;
+    padding-right: 40px;
+    position: relative;
+    z-index: -5;
+  }
+}
+
+.basic-img {
+  display: none;
+  @include large {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    z-index: -5;
+  }
+}
+
+.decription__content {
+  margin-bottom: 20px;
 }

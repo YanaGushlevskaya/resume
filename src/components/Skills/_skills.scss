@@ -1,0 +1,41 @@
+.container--skills {
+  @include large {
+    display: flex;
+  }
+}
+
+.skills__list {
+  @include large {
+    width: 50%;
+  }
+}
+
+.skills__item {
+  display: flex;
+  flex-direction: column;
+  &:not(:last-child) {
+    padding-bottom: 10px;
+  }
+}
+
+.item__title {
+  @include font-size(18);
+  font-family: $second-font;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 0 0 10px 0;
+}
+
+.skills__item p {
+  &:not(:last-child) {
+    margin: 0 0 5px 0;
+  }
+  &:before {
+    content: "\f00c";
+    color: $primary;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    padding-right: 10px;
+  }
+}

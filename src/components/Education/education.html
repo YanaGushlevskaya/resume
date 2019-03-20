@@ -1,0 +1,40 @@
+<section class="education">
+  <h1 hidden>education</h1>
+  <div class="container container--education">
+    <div class="description">
+      <h2 class="description__title after-dot">Education</h2>
+      <p class="decription__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque corrupti
+        beatae delectus unde reprehenderit culpa, numquam voluptate. Quas,
+        totam. Aut quidem atque quasi odio similique rem libero ipsam?
+        Reiciendis, dolorem!
+      </p>
+      <img src="img/acsent.png" alt="acsent" class="basic-img" />
+    </div>
+    <ul class="education__list reset-list">
+        {% set items = [
+            { title: "English classes in American English center",
+            subtitle: "feb 2019 - apr 2019",
+            content: "With the aim of increasing the level of knowledge and maintianing the current level I attend English classes." },
+            { title: "Kottans p2p course",
+            subtitle: "jan 2019 - now",
+            content: "It is free online programming course. The course contains basics
+            of front-end development: HTML, CSS, JS, and front-end frameworks." },
+            { title: "Front-End course at Beetroot Academy",
+            subtitle: "sep 2018 - jan 2019",
+            content: "This course explains how a browser works, how to put into practice HTML, CSS and JavaScript (ES6)" }
+            ]
+        %}
+
+        {% for item in items %}
+      <li class="education__item">
+        <div class="item__title-wrapper">
+          <h4 class="item__title">{{ item.title }}</h4>
+          <span class="item__subtitle">{{ item.subtitle }}</span>
+        </div>
+        <p>{{ item.content }}</p>
+      </li>
+        {% endfor %}
+    </ul>
+  </div>
+</section>

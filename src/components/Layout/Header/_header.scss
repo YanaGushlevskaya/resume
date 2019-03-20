@@ -102,6 +102,9 @@
   }
 }
 
+.nav__item:hover .nav__link {
+  color: $primary;
+}
 .nav__link {
   @include font-size(14);
   font-family: Lato;
@@ -113,9 +116,6 @@
   @include large {
     color: $primary-text;
     position: relative;
-    &:hover {
-      color: $primary;
-    }
   }
 }
 
@@ -145,4 +145,8 @@
   @include large {
     display: none;
   }
+}
+
+.scroll {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }

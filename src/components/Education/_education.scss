@@ -1,0 +1,51 @@
+.container--education {
+  @include large {
+    display: flex;
+  }
+}
+
+.education__list {
+  @include large {
+    width: 50%;
+  }
+}
+
+.education__item {
+  display: flex;
+  flex-direction: column;
+  &:not(:last-child) {
+    padding-bottom: 10px;
+  }
+}
+
+.item__title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+
+.item__title {
+  @include font-size(18);
+  font-family: $second-font;
+  font-weight: 700;
+  line-height: 1.5;
+  float: left;
+  margin: 0;
+}
+
+.item__subtitle {
+    @include font-size(16);
+    font-family: $second-font;
+    color: $secondary-text;
+    padding-left: 20px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.education__item p {
+  display: block;
+  &:not(:last-child) {
+    margin: 0 0 5px 0;
+  }
+}
