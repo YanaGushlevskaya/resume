@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link
+      href="https://fonts.googleapis.com/css?family=Lato: 400,700,900|Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    />
+  <title>
+    
+  My profile
+
+  </title>
+  <link rel="stylesheet" href="css/main.min.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+  <header class="header">
+  <div class="container container--header">
+    <div class="logo-wrapper">
+      <a href="#" class="logo__link reset-link">
+        <span class="logo">Yana Gushlevskaya</span>
+        <span class="logo-edition">.</span>
+      </a>
+    </div>
+
+    <div class="nav-wrap">
+      <button class="nav-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav__list reset-list">
+          <li class="nav__item">
+            <a href="#" class="nav__link reset-link">Hello</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link reset-link">Skills</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link reset-link">Education</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link reset-link">Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link reset-link">Contact me</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", init);
+
+    function init() {
+      const menuBtn = document.querySelector(".nav-btn");
+      const nav = document.querySelector(".nav");
+      let isActive = false;
+
+      menuBtn.addEventListener("click", function() {
+        const icon = this.querySelector("i");
+        isActive = !isActive;
+        icon.className = isActive ? "fas fa-times" : "fas fa-bars";
+        nav.classList.toggle("active");
+      });
+    }
+
+    $(window).scroll(function() {
+      $("header").toggleClass("scroll", $(this).scrollTop() > 100);
+    });
+  </script>
+</header>
+
+  
+  <div class="content">
+    
+  <section class="about">
+  <h1 hidden>About me</h1>
+  <div class="container container--about">
+    <div class="img-wrapper">
+      <img src="img/me-test.png" alt="It's me" class="about__img" />
+    </div>
+    <div class="about__wrapper">
+      <h1 class="about__title after-dot">Hi! My name is Yana Gushlevskaya</h1>
+      <p class="about__description">
+        I am a Junior Front-end Developer. Recently I completed courses at the Beetroot Academy, but I continue to study further. I am looking for a
+        full- or a part-time job in order to use the knowledge gained in
+        practice.
+      </p>
+      <div class="about__contacts">
+        <p>
+          <span>Phone</span>
+          <a href="tel:+380935053193" class="about__link reset-link"
+            >+38(093)-505-31-93</a
+          >
+        </p>
+        <p>
+          <span>Email</span>
+          <a
+            href="mailto:yanagushlevskaya@ukr.net"
+            class="about__link reset-link"
+            >yanagushlevskaya@ukr.net</a
+          >
+        </p>
+        <p>
+          <span>Address</span>
+          <span class="about__link">Kyiv, Ukraine</span>
+        </p>
+        <p>
+          <span>Social</span>
+          <span class="about__link">
+            <a
+              href="https://www.facebook.com/YanaGushlevskaya"
+              class="about__link reset-link about__link--social"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/yanagushlevskaya/?hl=ru"
+              class="about__link reset-link about__link--social"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://github.com/YanaGushlevskaya"
+              class="about__link reset-link about__link--social"
+              ><i class="fab fa-github"></i
+            ></a>
+          </span>
+        </p>
+        <form method="get" action="file/GUSHLEVSKAYA.pdf">
+          <button class="about__btn" type="submit">Download CV</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="skills">
+  <h1 hidden>Skills</h1>
+  <div class="container container--skills">
+    <div class="description">
+      <h2 class="description__title after-dot">Skills</h2>
+      <p class="decription__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque corrupti
+        beatae delectus unde reprehenderit culpa, numquam voluptate. Quas,
+        totam. Aut quidem atque quasi odio similique rem libero ipsam?
+        Reiciendis, dolorem!
+      </p>
+      <img src="img/acsent.png" alt="acsent" class="basic-img"/>
+    </div>
+    <ul class="skills__list reset-list">
+        <li class="skills__item">
+          <h4 class="item__title">Professional skills</h4>
+          <p class="item__content">HTML5/CSS3/SCSS/Nunjucks</p>
+          <p class="item__content">Adaptive, responsive design concepts</p>
+          <p class="item__content">BEM Methodology</p>
+          <p class="item__content">Bootstrap, Materialize libraries</p>
+          <p class="item__content">basic Javascript</p>
+          <p class="item__content">jGuery</p>
+          <p class="item__content">NPM</p>
+          <p class="item__content">NodeJS</p>
+          <p class="item__content">GIT</p>
+          <p class="item__content">Jira</p>
+          <p class="item__content">Gulp</pp>
+        </li>
+        <li class="skills__item">
+          <h4 class="item__title">Personal skills</h4>
+          <p class="item__content">Quick learner</p>
+          <p class="item__content">Good team player</p>
+          <p class="item__content">Maintain deadlines</pp>
+        </li>
+    </ul>
+</section>
+
+  <section class="education">
+  <h1 hidden>education</h1>
+  <div class="container container--education">
+    <div class="description">
+      <h2 class="description__title after-dot">Education</h2>
+      <p class="decription__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque corrupti
+        beatae delectus unde reprehenderit culpa, numquam voluptate. Quas,
+        totam. Aut quidem atque quasi odio similique rem libero ipsam?
+        Reiciendis, dolorem!
+      </p>
+      <img src="img/acsent.png" alt="acsent" class="basic-img" />
+    </div>
+    <ul class="education__list reset-list">
+        
+
+        
+      <li class="education__item">
+        <div class="item__title-wrapper">
+          <h4 class="item__title">English classes in American English center</h4>
+          <span class="item__subtitle">feb 2019 - apr 2019</span>
+        </div>
+        <p>With the aim of increasing the level of knowledge and maintianing the current level I attend English classes.</p>
+      </li>
+        
+      <li class="education__item">
+        <div class="item__title-wrapper">
+          <h4 class="item__title">Kottans p2p course</h4>
+          <span class="item__subtitle">jan 2019 - now</span>
+        </div>
+        <p>It is free online programming course. The course contains basics
+            of front-end development: HTML, CSS, JS, and front-end frameworks.</p>
+      </li>
+        
+      <li class="education__item">
+        <div class="item__title-wrapper">
+          <h4 class="item__title">Front-End course at Beetroot Academy</h4>
+          <span class="item__subtitle">sep 2018 - jan 2019</span>
+        </div>
+        <p>This course explains how a browser works, how to put into practice HTML, CSS and JavaScript (ES6)</p>
+      </li>
+        
+    </ul>
+  </div>
+</section>
+
+  <section class="portfolio">
+  <h1 hidden>portfolio</h1>
+  <div class="container container--portfolio">
+    <div class="description description--portfolio">
+      <h2 class="description__title after-dot">Portfolio</h2>
+    </div>
+    <div class="portfolio__wrapper">
+      <ul class="portfolio__list reset-list">
+        <li class="portfolio__item">
+          <a href="https://yanagushlevskaya.github.io/device/dist/index.html" class="portfolio__link reset-link">
+            <div class="portfolio__img-wrapper">
+            <img src="img/creative-agency.png" alt="device" class="portfolio__img" />
+            </div>
+            <span class="img-description">Multipage website</span>
+          <span class="img-data">February, 2019</span>
+          </a>
+        </li>
+        <li class="portfolio__item">
+          <a href="https://yanagushlevskaya.github.io/device/dist/index.html" class="portfolio__link reset-link">
+            <div class="portfolio__img-wrapper">
+            <img src="img/device.png" alt="device" class="portfolio__img" />
+            </div>
+            <span class="img-description">Group project</span>
+            <span class="img-data">November, 2018</span>
+           </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  </div>
+  
+  <footer class="footer">
+  Hello, from footer
+</footer>
+
+</body>
+</html>
