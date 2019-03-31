@@ -27,6 +27,7 @@
     "lodash": ">=4.17.5"
   },
   "dependencies": {
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "pdfobject": "^2.1.1"
   }
 }

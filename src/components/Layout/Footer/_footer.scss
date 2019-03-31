@@ -1,0 +1,11 @@
+
+.footer__wrapper{
+    width:100%;
+    background:$third;
+    text-align: center;
+    padding: 15px 0 15px 0;
+}
+
+.footer__copyright{
+    @include font-size(14);
+}
