@@ -103,7 +103,10 @@
 }
 
 .nav__item:hover .nav__link {
-  color: $primary;
+    color: $third;
+  @include large {
+    color: $primary;
+  }
 }
 .nav__link {
   @include font-size(14);
@@ -149,4 +152,8 @@
 
 .scroll {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.closed {
+  display: none;
 }
