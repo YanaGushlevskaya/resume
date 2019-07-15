@@ -11,7 +11,6 @@
 .portfolio__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   @include small {
     flex-direction: row;
     justify-content: space-around;
@@ -19,6 +18,7 @@
   }
   @include large {
     justify-content: flex-start;
+    align-items: flex-start;
   }
 }
 
@@ -58,4 +58,14 @@
 .img-description {
   font-weight: 700;
   color: $primary-text;
+}
+
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  text-align: center;
 }
