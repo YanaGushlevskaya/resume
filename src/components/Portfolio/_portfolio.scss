@@ -11,6 +11,7 @@
 .portfolio__list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   @include small {
     flex-direction: row;
     justify-content: space-around;
