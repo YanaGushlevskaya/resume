@@ -9,11 +9,13 @@ const sync = require('browser-sync');
 const nunjucks = require('gulp-nunjucks-render');
 const imagemin = require('gulp-imagemin');
 const rename = require('gulp-rename');
+const rigger = require('gulp-rigger');
+const uglify = require('gulp-uglify');
 
 gulp.task('css', () => {
   return gulp
-    .src('src/main.scss')
-    .pipe(plumber())
+    .src('src/main.scss') //какой файл берем
+    .pipe(plumber()) //вызов плагина
     .pipe(maps.init())
     .pipe(
       sass({
@@ -33,7 +35,7 @@ gulp.task('css', () => {
     )
     .pipe(maps.write())
     .pipe(plumber.stop())
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('dist/css')) // куда сохраняем
     .pipe(sync.stream());
 });
 
@@ -67,7 +69,20 @@ gulp.task('img', () => {
     .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('reload', () => {
+gulp.task('js', () => {
+  return gulp
+  .src('index.js')
+  .pipe(plumber())
+  .pipe(maps.init())
+  .pipe(rigger())
+  /* .pipe(uglify()) */
+  .pipe(maps.write())
+  .pipe(plumber.stop())
+  .pipe(gulp.dest('dist/'))
+  .pipe(sync.stream());
+})
+
+gulp.task('reload', () => { //для компиляции при сохранении файла
   sync({
     server: {
       baseDir: 'dist/',
@@ -76,7 +91,8 @@ gulp.task('reload', () => {
   });
 });
 
-gulp.task('watch', ['img', 'css', 'html', 'reload'], () => {
+gulp.task('watch', ['img', 'js', 'css', 'html', 'reload'], () => {
   watch('src/**/*.scss', () => gulp.start('css'));
   watch('src/**/*.html', () => gulp.start('html'));
+  watch('src/**/*.js', () => gulp.start('js'));
 });

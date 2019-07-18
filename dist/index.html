@@ -12,7 +12,7 @@
     />
   <title>
     
-  My profile
+  CV Yana Gushlevskaya
 
   </title>
   <link rel="stylesheet" href="css/main.min.css">
@@ -51,7 +51,7 @@
       </nav>
     </div>
   </div>
-  <script>
+<!--   <script>
   function init(){
     const menuBtn = document.querySelector(".nav-btn");
     const nav = document.querySelector(".nav");
@@ -70,7 +70,7 @@
        });
     });
   }
-</script>
+</script> -->
 </header>
 
   
@@ -85,7 +85,7 @@
     <div class="about__wrapper">
       <h1 class="about__title after-dot">Hi! My name is Yana Gushlevskaya</h1>
       <p class="about__description">
-        I am a Junior Front-end Developer. Recently I completed courses at the Beetroot Academy, but I continue to study further. I want to go to Training Tracks and also try to get to Internship Program.
+        I am a Junior Front-end Developer. Recently I completed courses at the Beetroot Academy, but I continue to study further. r. I am looking for a full- or a part-time job in order to use the knowledge gained in practice.
       </p>
       <div class="about__contacts">
         <p>
@@ -135,7 +135,7 @@
     <div class="description">
       <h2 class="description__title after-dot">Skills</h2>
       <p class="decription__content">
-          I am inspired by creating great work with people who are as passionate as I am about building something awesome.
+        I am inspired by creating great products with people who are as passionate as I am about building something that matters.
       </p>
       <img src="img/acsent.png" alt="acsent" class="basic-img"/>
     </div>
@@ -272,21 +272,6 @@
   <p class="footer__copyright">Copyright 2019 Yana Gushlevskaya.</p>
   </div>
 </footer>
-  <script type="text/javascript">
-document.addEventListener("DOMContentLoaded", init);
-
- $(document).ready(function(){
-    $("#header").on("click","a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top }, 800);
-    })
-});
-
-    $(window).scroll(function() {
-      $("header").toggleClass("scroll", $(this).scrollTop() > 100)
-    });
-  </script>
+  <script src="index.js"></script>
 </body>
 </html>
